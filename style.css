@@ -1,0 +1,72 @@
+body {
+  display: grid;
+  place-items: center;
+  background-color: blanchedalmond;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 270px;
+  height: 270px;
+  background: linear-gradient(rgb(255, 109, 109), rgb(255, 4, 4));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10% auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.box {
+  background: linear-gradient(rgb(246, 255, 119), rgb(255, 196, 0));
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.pyramid {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(45deg, rgb(119, 95, 14), rgb(170, 105, 20));
+  position: relative;
+  transform: rotate(45deg);
+  left: 90px;
+  bottom: -100px;
+}
+
+.pyramid::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(rgb(248, 141, 0), rgb(255, 217, 0));
+  position: absolute;
+  left: -101px;
+  top: -11px;
+}
+
+.box::before {
+  content: "";
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(rgb(170, 105, 20), rgb(105, 86, 21));
+  position: absolute;
+  transform: rotate(45deg);
+  left: -30px;
+  top: 160px;
+}
+.box::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(rgb(170, 105, 20), rgb(105, 86, 21));
+  position: absolute;
+  transform: rotate(45deg);
+  left: 30px;
+  top: 150px;
+}
